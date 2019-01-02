@@ -12,7 +12,7 @@ import me.pisal.badoorecyclerview.service.UserSevice
 
 class MainActivity : AppCompatActivity() {
 
-    var users: ArrayList<User>? = null
+    private var users: ArrayList<User>? = null
 
     lateinit var userAdapter: BDAdapter
 
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         initData()
     }
 
+    //region init
     private fun initData(){
         users = UserSevice.getUsers()
         updateUI()
@@ -43,4 +44,5 @@ class MainActivity : AppCompatActivity() {
             userAdapter.models = users!!
         }
     }
+    //endregion
 }

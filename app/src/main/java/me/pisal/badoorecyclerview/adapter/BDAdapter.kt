@@ -19,6 +19,7 @@ class BDAdapter: RecyclerView.Adapter <BDAdapter.BDViewHolder>(){
         notifyDataSetChanged()
     }
 
+    //region overriding
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): BDViewHolder {
         val view = LayoutInflater.from(p0.context).inflate(R.layout.vh_bd, p0, false)
         return BDViewHolder(view)
@@ -31,6 +32,7 @@ class BDAdapter: RecyclerView.Adapter <BDAdapter.BDViewHolder>(){
     override fun onBindViewHolder(p0: BDViewHolder, p1: Int) {
         p0.bindView(models[p1])
     }
+    //endregion
 
     //region view holder
     class BDViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -51,4 +53,5 @@ class BDAdapter: RecyclerView.Adapter <BDAdapter.BDViewHolder>(){
             }
         }
     }
+    //endregion
 }
